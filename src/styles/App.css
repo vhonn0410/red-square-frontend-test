@@ -1,0 +1,55 @@
+.contentDiv {
+    background-color: white;
+    min-height: 580px;
+    padding: 28px;
+    border-radius: 10px;
+}
+
+.carouselItem {
+    height: 320px;
+    color: #fff;
+    line-height: 320px;
+    text-align: center;
+    background: #364d79;
+}
+
+.general {
+    /* min-height: 280px; */
+    display: flex;
+    flex-direction: column;
+}
+
+:where(.css-dev-only-do-not-override-1k979oh).ant-layout-header {
+    background-color: white;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px;
+    margin: 0px;
+}
+
+.header .headerItem {
+    margin-left: 38px;
+    margin-right: 38px;
+}
+
+.footer {
+    text-align: center;
+    color: #fff;
+    background-color: #4096ff;
+}
+
+:where(.css-dev-only-do-not-override-1k979oh).ant-rate .ant-rate-star {
+    margin: 0px;
+}
+
+.content {
+    margin: "10%"
+}
+
+.ant-tabs-content-holder {
+    margin-top: auto;
+    margin-bottom: auto;
+}
