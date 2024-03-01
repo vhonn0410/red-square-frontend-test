@@ -5,7 +5,6 @@ const initialState = {
   cartItems: {}
 };
 export default function (state = initialState, action) {
-  console.log("RRRR", action, state)
   switch (action.type) {
     case MODIFYCART:
       return {
