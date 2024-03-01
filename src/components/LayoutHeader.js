@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Layout, Menu, Typography } from 'antd';
+import { Layout, Menu, Typography, Badge } from 'antd';
 import { Link, useNavigate } from "react-router-dom";
 import { ShoppingCartOutlined, LoginOutlined } from '@ant-design/icons';
 import LoginModal from './LoginModal';
@@ -15,6 +15,7 @@ const LayoutHeader = () => {
     const navigate = useNavigate();
     const [isModalOpen, setIsModalOpen] = useState(false);
     const user = useSelector((state) => state?.auth?.user);
+    const cartItems = useSelector((state) => state.cart.cartItems);
 
     return (
         <Header className='header'>
@@ -28,8 +29,11 @@ const LayoutHeader = () => {
                 }}
             />
             <LoginOutlined style={{ backgroundColor: "white", fontSize: '32px' }} onClick={() => setIsModalOpen(true)} /><Typography style={{ margin: "auto 10px" }}>{Object.keys(user).length ? `${user?.firstName} ${user?.lastName}` : "LOGIN"}</Typography>
-            <ShoppingCartOutlined className='headerItem' style={{ backgroundColor: "white", fontSize: '32px' }} onClick={() => navigate(`/cart`)} />
-
+            <div style={{ display: "flex", marginTop: "18px", marginRight: "38px" }} >
+                <Badge count={Object.values(cartItems ?? {}).filter((v) => v.count).length} style={{ marginTop: "2px", marginRight: "38px", cursor: "context-menu" }}>
+                    <ShoppingCartOutlined className='headerItem' style={{ backgroundColor: "white", fontSize: '32px', padding: 0 }} onClick={() => navigate(`/cart`)} />
+                </Badge>
+            </div>
             <LoginModal isModalOpen={isModalOpen} handleCancel={() => setIsModalOpen(false)} />
         </Header>
 
