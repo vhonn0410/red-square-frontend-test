@@ -1,4 +1,4 @@
-# RedSquare Backend Test - Henry
+# RedSquare Frontend Test - Henry
 
 ## Description
 
