@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+# RedSquare Backend Test - Henry
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
 
-## Available Scripts
+This project is designed to Red Square Frontend Test.
 
-In the project directory, you can run:
+## Table of Contents
 
-### `npm start`
+- [Installation](#installation)
+- [Usage](#usage)
+- [Testing Instructions](#testing)
+- [References](#reference)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Installation
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+To get started with the project, follow these steps:
 
-### `npm test`
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/vhonn0410/red-square-frontend-test.git
+    ```
+2. Install dependencies using npm:
+   ```bash
+   npm install
+    ```
+## Usage
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To run the project locally, use the following command:
 
-### `npm run build`
+```bash
+npm run start
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Testing Instructions
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Testing `Question#1`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To test on the function
+```bash
+npm run q1Func
+```
 
-### `npm run eject`
+`OR`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+To test on the function with `n`
+```bash
+npm run q1Func n=100
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# References
+- Product Details UI - https://www.yieldify.com/wp-content/uploads/2020/06/social-proof-examples-6.webp
+- Cart UI - https://assets-global.website-files.com/605826c62e8de87de744596e/65e0421a1dcb680ef542674e_solo%20stove.webp
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Product List UI 
+    - https://dribbble.com/shots/18301972-Product-List-page-Web-Design
+    - https://dribbble.com/shots/4869122-List-Product
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Header - https://shopify-xrh7.onrender.com/products
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Ant Design UI Library - https://ant.design/components/overview/
