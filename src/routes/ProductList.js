@@ -93,52 +93,7 @@ function ProductList() {
 
     return (
         <GeneralLayout>
-            {console.log("DDD, prod", products, _products)}
-            <Drawer title={<><FilterOutlined style={{ margin: "0 8px" }} />Filter</>} onClose={() => setOpenDrawer(false)} open={openDrawer}>
-                <Form
-                    name="basic"
-                    labelCol={{ span: 8 }}
-                    wrapperCol={{ span: 16 }}
-                    style={{ maxWidth: 600 }}
-                    initialValues={{ username: "kminchelle", password: "0lelplR" }}
-                    // onFinish={(loginDetal) => Object.keys(user).length ? logout() : login(loginDetal)}
-                    // onFinishFailed={() => console.log("aaaa", "failed")}
-                    autoComplete="off"
-                >
-                    <Form.Item
-                        label="Username"
-                        name="username"
-                    >
-                        <Input />
-                    </Form.Item>
-
-                    <Form.Item
-                        label="Password"
-                        name="password"
-                    >
-                        <Input.Password />
-                    </Form.Item>
-                    <Form.Item name="category" label="Category">
-                        <Checkbox.Group onChange={(v) => setProductListConfig((a) => ({ ...a, category: v }))}>
-                            <Row>
-                                {category.map((c) =>
-                                    <Col key={c}>
-                                        <Checkbox
-                                            value={c}
-                                            style={{
-                                                lineHeight: '32px',
-                                            }}
-                                        >
-                                            {c}
-                                        </Checkbox>
-                                    </Col>
-                                )}
-                            </Row>
-                        </Checkbox.Group>
-                    </Form.Item>
-                </Form>
-            </Drawer>
-
+            {/* Pagination, Search, Sort By, Filter Icon */}
             <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
                 <Col className="gutter-row" span={7}>
                     <Pagination current={productListConfig.curPage} total={_products.length} style={{ float: "left", marginLeft: "68px" }} onChange={(v) => setProductListConfig((a) => ({ ...a, curPage: v }))} />
@@ -164,6 +119,7 @@ function ProductList() {
                 </Col>
             </Row>
             <br />
+            {/* Product List Render */}
             <Flex gap="large" wrap="wrap" justify="center">
                 {(_products.slice((productListConfig.curPage - 1) * maxProducts, productListConfig.curPage * maxProducts) ?? []).map(product => (
                     <div key={product.id} className="product">
@@ -171,6 +127,26 @@ function ProductList() {
                     </div>
                 ))}
             </Flex>
+            {/* Product List Filtering */}
+            <Drawer title={<><FilterOutlined style={{ margin: "0 8px" }} />Filter</>} onClose={() => setOpenDrawer(false)} open={openDrawer}>
+                <Form
+                    name="basic"
+                    labelCol={{ span: 8 }}
+                    wrapperCol={{ span: 16 }}
+                    style={{ maxWidth: 600 }}
+                    autoComplete="off"
+                >
+                    <Form.Item name="category" label="Category">
+                        <Checkbox.Group onChange={(v) => setProductListConfig((a) => ({ ...a, category: v }))}>
+                            <Row>
+                                {category.map((c) =>
+                                    <Col key={c}><Checkbox value={c} style={{ lineHeight: '32px', }}>{c}</Checkbox></Col>
+                                )}
+                            </Row>
+                        </Checkbox.Group>
+                    </Form.Item>
+                </Form>
+            </Drawer>
         </GeneralLayout>
     );
 }
